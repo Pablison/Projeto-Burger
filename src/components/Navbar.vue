@@ -1,7 +1,7 @@
 <template>
-    <div class="nav">
+    <div id="nav">
         <RouterLink to="/">
-          <img src="" id="logo">
+          <img :src="logo" :alt="logoBurger" id="logo">
         </RouterLink>
 
         <RouterLink to="/">Home</RouterLink>
@@ -11,7 +11,8 @@
 </template>
 <script>
   export default {
-    name: "Navbar"
+    name: "Navbar",
+    props:["logo","logoBurger"]
   }
 </script>
 <style scoped>
