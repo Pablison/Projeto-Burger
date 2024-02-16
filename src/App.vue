@@ -22,13 +22,23 @@ export default {
 }
 </script>
 
-<style scoped>
-  #nav {
-    background-color: #222;
-    border-bottom: 4px solid #111;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    margin: 50px;
+    min-height: 300px;
+  }
+
+  h1{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
   }
 </style>

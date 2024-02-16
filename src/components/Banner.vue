@@ -1,0 +1,45 @@
+<template>
+    <div id="main-banner">
+        <h1>Make Your Burger</h1>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "Banner"
+}
+</script>
+
+<style scoped>
+    #main-banner {
+        background-image: url('/img/burger.jpg');
+        background-position: 0 -400px;
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #main-banner h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    background-color: #222;
+    padding: 20px 40px;
+    position: relative;
+    }
+    
+    #main-banner h1::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #fcba03; /* Cor do destaque */
+        bottom: 0;
+        left: 0;
+    }
+
+
+</style>
+
