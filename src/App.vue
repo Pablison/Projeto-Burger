@@ -1,10 +1,12 @@
 <template>
-  <Navbar :logo="logo_src" :alt="app_name"/>
-  <RouterView />
-  <Footer />
+  <div>
+    <Navbar :logo="logo_src" :alt="app_name"/>
+    <RouterView />
+    <Footer />
+  </div>
 </template>
 
-<script >
+<script>
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue'
 
