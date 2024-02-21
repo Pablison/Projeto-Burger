@@ -21,6 +21,6 @@
         align-items: center;
         width: 100%;
         bottom: 0;
-        position: fixed;
+        /* position: fixed; */
     }
 </style>
