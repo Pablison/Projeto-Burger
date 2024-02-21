@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <p>Componente</p>
+        <Message :msg="msg" v-show="msg"/>
         <div class="container">
             <form id="burger-form" class="form-container" @submit="createBurger">
                 <div class="input-container">
@@ -42,6 +42,9 @@
 </template>
 
 <script>
+
+import Message from './Message.vue';
+
 export default {
     name: "BurgerForm",
     data(){
@@ -88,10 +91,12 @@ export default {
             });
 
             const res = await req.json();
-        
-            console.log(res);
 
             //colocar uma mensagem de sistema
+            this.msg = `Pedido Nº ${res.id} realizado com sucesso`
+
+            //Limpa a mensagem
+            setTimeout(() => this.msg = "", 3000);
 
             //Limpa os campos após inserção 
             this.nome = "";
@@ -103,6 +108,9 @@ export default {
     }, 
     mounted(){
         this.getIngredientes();
+    },
+    components: {
+        Message
     }
 
 }
@@ -115,7 +123,6 @@ export default {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         height: 100vh; /* Isso faz com que o formulário ocupe toda a altura da viewport */
     }
